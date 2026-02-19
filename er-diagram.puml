@@ -1,0 +1,88 @@
+@startuml LEBABA Shop ER Diagram
+
+!define table(x) class x << (T,#FFAAAA) >>
+!define primary_key(x) <u>x</u>
+!define foreign_key(x) #x#
+
+' Стили
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+' Сущности
+table(users) {
+    primary_key(id): UUID
+    email: String
+    password: String
+    name: String
+    role: Enum
+    created_at: DateTime
+    updated_at: DateTime
+}
+
+table(products) {
+    primary_key(id): UUID
+    name: String
+    description: Text
+    price: Decimal
+    stock: Integer
+    category: String
+    created_at: DateTime
+    updated_at: DateTime
+}
+
+table(orders) {
+    primary_key(id): UUID
+    foreign_key(user_id): UUID
+    status: Enum
+    total_amount: Decimal
+    created_at: DateTime
+    updated_at: DateTime
+}
+
+table(order_items) {
+    primary_key(id): UUID
+    foreign_key(order_id): UUID
+    foreign_key(product_id): UUID
+    quantity: Integer
+    price: Decimal
+}
+
+table(reviews) {
+    primary_key(id): UUID
+    foreign_key(user_id): UUID
+    foreign_key(product_id): UUID
+    rating: Integer
+    comment: Text
+    created_at: DateTime
+}
+
+table(deals) {
+    primary_key(id): UUID
+    name: String
+    description: Text
+    discount_percent: Integer
+    start_date: DateTime
+    end_date: DateTime
+    created_at: DateTime
+}
+
+table(stats) {
+    primary_key(id): UUID
+    type: String
+    value: Decimal
+    date: DateTime
+    created_at: DateTime
+}
+
+' Связи
+users "1" -- "0..*" orders : places
+users "1" -- "0..*" reviews : writes
+products "1" -- "0..*" order_items : contains
+products "1" -- "0..*" reviews : has
+orders "1" -- "1..*" order_items : contains
+deals "1" -- "0..*" products : applies_to
+
+@enduml 

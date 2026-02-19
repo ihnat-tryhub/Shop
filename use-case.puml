@@ -1,0 +1,98 @@
+@startuml LEBABA Shop Use Case Diagram
+
+skinparam actorStyle awesome
+skinparam usecase {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Black
+}
+
+' Акторы
+actor "Гость" as Guest
+actor "Пользователь" as User
+actor "Администратор" as Admin
+actor "Система" as System
+
+' Общие use cases
+rectangle "LEBABA Shop" {
+    ' Гость
+    usecase "Регистрация" as UC1
+    usecase "Авторизация" as UC2
+    usecase "Просмотр товаров" as UC3
+    usecase "Поиск товаров" as UC4
+    usecase "Просмотр отзывов" as UC5
+    usecase "Просмотр акций" as UC6
+
+    ' Пользователь
+    usecase "Управление профилем" as UC7
+    usecase "Добавление в корзину" as UC8
+    usecase "Оформление заказа" as UC9
+    usecase "Оплата заказа" as UC10
+    usecase "Написание отзыва" as UC11
+    usecase "Отслеживание заказа" as UC12
+    usecase "Возврат товара" as UC13
+
+    ' Администратор
+    usecase "Управление товарами" as UC14
+    usecase "Управление заказами" as UC15
+    usecase "Управление пользователями" as UC16
+    usecase "Управление акциями" as UC17
+    usecase "Просмотр статистики" as UC18
+    usecase "Управление отзывами" as UC19
+
+    ' Система
+    usecase "Отправка уведомлений" as UC20
+    usecase "Обновление статистики" as UC21
+    usecase "Проверка наличия" as UC22
+}
+
+' Связи для Гостя
+Guest --> UC1
+Guest --> UC2
+Guest --> UC3
+Guest --> UC4
+Guest --> UC5
+Guest --> UC6
+
+' Связи для Пользователя
+User --> UC7
+User --> UC8
+User --> UC9
+User --> UC10
+User --> UC11
+User --> UC12
+User --> UC13
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+
+' Связи для Администратора
+Admin --> UC14
+Admin --> UC15
+Admin --> UC16
+Admin --> UC17
+Admin --> UC18
+Admin --> UC19
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+
+' Связи для Системы
+System --> UC20
+System --> UC21
+System --> UC22
+
+' Расширения и включения
+UC9 ..> UC8 : <<include>>
+UC9 ..> UC10 : <<include>>
+UC9 ..> UC22 : <<include>>
+UC10 ..> UC20 : <<extend>>
+UC12 ..> UC20 : <<extend>>
+UC14 ..> UC22 : <<include>>
+UC15 ..> UC20 : <<extend>>
+UC17 ..> UC20 : <<extend>>
+UC18 ..> UC21 : <<include>>
+
+@enduml 

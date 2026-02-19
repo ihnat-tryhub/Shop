@@ -1,158 +1,158 @@
 # 🛍️ LEBABA Shop
 
-Сучасний веб-додаток для електронної комерції з повним функціоналом для покупців та адміністраторів.
+A modern e-commerce web application with full functionality for customers and administrators.
 
-## 📋 Зміст
+## 📋 Table of Contents
 
-- [Опис проєкту](#опис-проєкту)
-- [Основні можливості](#основні-можливості)
-- [Технології](#технології)
-- [Структура проєкту](#структура-проєкту)
-- [Встановлення та запуск](#встановлення-та-запуск)
+- [Project Description](#project-description)
+- [Key Features](#key-features)
+- [Technologies](#technologies)
+- [Project Structure](#project-structure)
+- [Installation & Setup](#installation--setup)
 - [API Endpoints](#api-endpoints)
-- [Функціонал](#функціонал)
-- [Деплой](#деплой)
-- [Автор](#автор)
+- [Functionality](#functionality)
+- [Deployment](#deployment)
+- [Author](#author)
 
-## 📖 Опис проєкту
+## 📖 Project Description
 
-**LEBABA Shop** — це повнофункціональний інтернет-магазин, побудований за архітектурою client-server. Проєкт включає сучасний frontend на React та потужний backend на Node.js з REST API. Система забезпечує безпечну автентифікацію, керування товарами, замовленнями, відгуками та статистикою.
+**LEBABA Shop** is a full-featured online store built with a client-server architecture. The project includes a modern React frontend and a powerful Node.js backend with REST API. The system provides secure authentication, product management, orders, reviews, and statistics.
 
-## ✨ Основні можливості
+## ✨ Key Features
 
-### Для користувачів:
-- 🔐 Реєстрація та авторизація
-- 🔍 Пошук та фільтрація товарів
-- 🛒 Кошик для покупок
-- 📦 Оформлення та відстеження замовлень
-- ⭐ Залишення відгуків на товари
-- 💳 Оплата через Stripe
-- 📊 Персональна статистика покупок
-- 👤 Управління профілем
+### For Customers:
+- 🔐 Registration and authentication
+- 🔍 Product search and filtering
+- 🛒 Shopping cart
+- 📦 Order placement and tracking
+- ⭐ Product reviews
+- 💳 Payment via Stripe
+- 📊 Personal purchase statistics
+- 👤 Profile management
 
-### Для адміністраторів:
-- 🎛️ Панель керування (Dashboard)
-- 📦 Керування товарами (CRUD операції)
-- 📋 Управління замовленнями
-- 👥 Керування користувачами
-- 📈 Статистика магазину
-- 🎁 Управління акціями та спеціальними пропозиціями
-- 📊 Візуалізація даних через графіки
+### For Administrators:
+- 🎛️ Dashboard
+- 📦 Product management (CRUD operations)
+- 📋 Order management
+- 👥 User management
+- 📈 Store statistics
+- 🎁 Deals and special offers management
+- 📊 Data visualization with charts
 
-## 🛠️ Технології
+## 🛠️ Technologies
 
 ### Frontend:
-- **React 18** — бібліотека для побудови UI
-- **Redux Toolkit** — керування станом додатку
-- **React Router** — маршрутизація
-- **Tailwind CSS** — стилізація
-- **Vite** — збірка та розробка
-- **Axios** — HTTP клієнт
-- **Chart.js** — візуалізація статистики
-- **Stripe** — інтеграція оплати
-- **AOS** — анімації при скролі
-- **Toastr** — сповіщення
+- **React 18** — UI library
+- **Redux Toolkit** — State management
+- **React Router** — Routing
+- **Tailwind CSS** — Styling
+- **Vite** — Build tool and dev server
+- **Axios** — HTTP client
+- **Chart.js** — Statistics visualization
+- **Stripe** — Payment integration
+- **AOS** — Scroll animations
+- **Toastr** — Notifications
 
 ### Backend:
-- **Node.js** — серверне середовище
-- **Express 5** — веб-фреймворк
-- **Mongoose** — ODM для MongoDB
-- **JWT** — автентифікація та авторизація
-- **bcrypt** — хешування паролів
-- **Cloudinary** — завантаження зображень
-- **Stripe** — обробка платежів
-- **Helmet** — безпека HTTP заголовків
-- **express-rate-limit** — обмеження запитів
-- **express-mongo-sanitize** — захист від NoSQL ін'єкцій
-- **xss-clean** — захист від XSS атак
+- **Node.js** — Runtime environment
+- **Express 5** — Web framework
+- **Mongoose** — MongoDB ODM
+- **JWT** — Authentication and authorization
+- **bcrypt** — Password hashing
+- **Cloudinary** — Image uploads
+- **Stripe** — Payment processing
+- **Helmet** — HTTP header security
+- **express-rate-limit** — Request rate limiting
+- **express-mongo-sanitize** — NoSQL injection protection
+- **xss-clean** — XSS attack protection
 
-## 📁 Структура проєкту
+## 📁 Project Structure
 
 ```
 LEBABA Shop/
-├── frontend/                 # Клієнтська частина
+├── frontend/                 # Client-side
 │   ├── src/
-│   │   ├── components/       # Переіспользувані компоненти
+│   │   ├── components/       # Reusable components
 │   │   │   ├── Navbar.jsx
 │   │   │   ├── Footer.jsx
 │   │   │   ├── Login.jsx
 │   │   │   ├── Register.jsx
 │   │   │   └── ...
-│   │   ├── pages/           # Сторінки додатку
-│   │   │   ├── home/        # Головна сторінка
-│   │   │   ├── shop/        # Магазин товарів
-│   │   │   ├── dashboard/   # Панель керування
-│   │   │   │   ├── admin/   # Адмін панель
-│   │   │   │   └── user/    # Користувацька панель
+│   │   ├── pages/           # Application pages
+│   │   │   ├── home/        # Home page
+│   │   │   ├── shop/        # Product store
+│   │   │   ├── dashboard/   # Dashboard
+│   │   │   │   ├── admin/   # Admin panel
+│   │   │   │   └── user/    # User panel
 │   │   │   └── ...
-│   │   ├── redux/           # Redux store та слайси
+│   │   ├── redux/           # Redux store and slices
 │   │   │   ├── features/
 │   │   │   │   ├── auth/
 │   │   │   │   ├── cart/
 │   │   │   │   ├── products/
 │   │   │   │   └── ...
 │   │   │   └── store.js
-│   │   ├── routers/         # Маршрутизація
-│   │   └── utils/           # Утиліти
-│   ├── public/              # Статичні файли
+│   │   ├── routers/         # Routing
+│   │   └── utils/           # Utilities
+│   ├── public/              # Static files
 │   └── package.json
 │
-├── backend/                 # Серверна частина
+├── backend/                 # Server-side
 │   ├── src/
-│   │   ├── auth/            # Автентифікація
-│   │   ├── products/        # Товари
-│   │   ├── orders/          # Замовлення
-│   │   ├── reviews/         # Відгуки
-│   │   ├── deals/           # Акції
-│   │   ├── users/           # Користувачі
-│   │   ├── stats/           # Статистика
-│   │   ├── middleware/      # Мідлвари
+│   │   ├── auth/            # Authentication
+│   │   ├── products/        # Products
+│   │   ├── orders/          # Orders
+│   │   ├── reviews/         # Reviews
+│   │   ├── deals/           # Deals
+│   │   ├── users/           # Users
+│   │   ├── stats/           # Statistics
+│   │   ├── middleware/      # Middleware
 │   │   │   ├── verifyToken.js
 │   │   │   ├── virifyAdmin.js
 │   │   │   └── generateToken.js
-│   │   └── utils/           # Утиліти
+│   │   └── utils/           # Utilities
 │   │       ├── uploadImage.js
 │   │       └── globalLimiter.js
-│   ├── index.js             # Точка входу
+│   ├── index.js             # Entry point
 │   └── package.json
 │
-├── er-diagram.puml          # ER діаграма бази даних
-├── use-case.puml            # Use-case діаграма
-└── README.md                # Документація
+├── er-diagram.puml          # Database ER diagram
+├── use-case.puml            # Use-case diagram
+└── README.md                # Documentation
 ```
 
-## 🚀 Встановлення та запуск
+## 🚀 Installation & Setup
 
-### Передумови
+### Prerequisites
 
-- Node.js (версія 18 або вище)
-- npm або yarn
-- MongoDB (локально або MongoDB Atlas)
-- Обліковий запис Cloudinary (для завантаження зображень)
-- Обліковий запис Stripe (для оплати)
+- Node.js (version 18 or higher)
+- npm or yarn
+- MongoDB (local or MongoDB Atlas)
+- Cloudinary account (for image uploads)
+- Stripe account (for payments)
 
-### Крок 1: Клонування репозиторію
+### Step 1: Clone the repository
 
 ```bash
 git clone <repository-url>
 cd "LEBABA Shop"
 ```
 
-### Крок 2: Встановлення залежностей Backend
+### Step 2: Install Backend dependencies
 
 ```bash
 cd backend
 npm install
 ```
 
-### Крок 3: Налаштування змінних середовища Backend
+### Step 3: Configure Backend environment variables
 
-Створіть файл `.env` в папці `backend/` з наступним вмістом:
+Create a `.env` file in the `backend/` folder with the following content:
 
 ```env
 PORT=5000
 DATABASE=mongodb://localhost:27017/lebaba-shop
-# або для MongoDB Atlas:
+# or for MongoDB Atlas:
 # DATABASE=mongodb+srv://username:password@cluster.mongodb.net/lebaba-shop
 
 JWT_SECRET=your-secret-jwt-key-here
@@ -162,169 +162,169 @@ CLOUDINARY_API_SECRET=your-cloudinary-api-secret
 STRIPE_SECRET_KEY=your-stripe-secret-key
 ```
 
-### Крок 4: Запуск Backend
+### Step 4: Start Backend
 
 ```bash
 npm start
 ```
 
-Backend буде доступний на `http://localhost:5000`
+Backend will be available at `http://localhost:5000`
 
-### Крок 5: Встановлення залежностей Frontend
+### Step 5: Install Frontend dependencies
 
-Відкрийте новий термінал:
+Open a new terminal:
 
 ```bash
 cd frontend
 npm install
 ```
 
-### Крок 6: Налаштування змінних середовища Frontend
+### Step 6: Configure Frontend environment variables
 
-Створіть файл `.env` в папці `frontend/` з наступним вмістом:
+Create a `.env` file in the `frontend/` folder with the following content:
 
 ```env
 VITE_API_URL=http://localhost:5000
 VITE_STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
 ```
 
-### Крок 7: Запуск Frontend
+### Step 7: Start Frontend
 
 ```bash
 npm start
 ```
 
-Frontend буде доступний на `http://localhost:5173`
+Frontend will be available at `http://localhost:5173`
 
 ## 🔌 API Endpoints
 
-### Автентифікація
-- `POST /api/auth/register` - Реєстрація користувача
-- `POST /api/auth/login` - Вхід в систему
-- `GET /auth-check` - Перевірка авторизації
+### Authentication
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
+- `GET /auth-check` - Authorization check
 
-### Товари
-- `GET /api/product` - Отримати всі товари (з фільтрацією)
-- `GET /api/product/:id` - Отримати товар за ID
-- `POST /api/product` - Створити товар (тільки адмін)
-- `PUT /api/product/:id` - Оновити товар (тільки адмін)
-- `DELETE /api/product/:id` - Видалити товар (тільки адмін)
+### Products
+- `GET /api/product` - Get all products (with filtering)
+- `GET /api/product/:id` - Get product by ID
+- `POST /api/product` - Create product (admin only)
+- `PUT /api/product/:id` - Update product (admin only)
+- `DELETE /api/product/:id` - Delete product (admin only)
 
-### Замовлення
-- `GET /api/order` - Отримати замовлення користувача
-- `GET /api/order/:id` - Отримати замовлення за ID
-- `POST /api/order` - Створити замовлення
-- `PUT /api/order/:id` - Оновити статус замовлення (тільки адмін)
+### Orders
+- `GET /api/order` - Get user orders
+- `GET /api/order/:id` - Get order by ID
+- `POST /api/order` - Create order
+- `PUT /api/order/:id` - Update order status (admin only)
 
-### Відгуки
-- `GET /api/review/:productId` - Отримати відгуки товару
-- `POST /api/review` - Створити відгук
-- `PUT /api/review/:id` - Оновити відгук
-- `DELETE /api/review/:id` - Видалити відгук
+### Reviews
+- `GET /api/review/:productId` - Get product reviews
+- `POST /api/review` - Create review
+- `PUT /api/review/:id` - Update review
+- `DELETE /api/review/:id` - Delete review
 
-### Акції
-- `GET /api/deal` - Отримати всі акції
-- `POST /api/deal` - Створити акцію (тільки адмін)
-- `PUT /api/deal/:id` - Оновити акцію (тільки адмін)
-- `DELETE /api/deal/:id` - Видалити акцію (тільки адмін)
+### Deals
+- `GET /api/deal` - Get all deals
+- `POST /api/deal` - Create deal (admin only)
+- `PUT /api/deal/:id` - Update deal (admin only)
+- `DELETE /api/deal/:id` - Delete deal (admin only)
 
-### Статистика
-- `GET /api/stats` - Отримати статистику (тільки адмін)
+### Statistics
+- `GET /api/stats` - Get statistics (admin only)
 
-### Користувачі
-- `GET /api/users` - Отримати всіх користувачів (тільки адмін)
-- `GET /api/users/:id` - Отримати користувача за ID
-- `PUT /api/users/:id` - Оновити користувача
-- `DELETE /api/users/:id` - Видалити користувача (тільки адмін)
+### Users
+- `GET /api/users` - Get all users (admin only)
+- `GET /api/users/:id` - Get user by ID
+- `PUT /api/users/:id` - Update user
+- `DELETE /api/users/:id` - Delete user (admin only)
 
-### Завантаження зображень
-- `POST /uploadImage` - Завантажити зображення на Cloudinary
+### Image Upload
+- `POST /uploadImage` - Upload image to Cloudinary
 
-## 💡 Функціонал
+## 💡 Functionality
 
-### Система автентифікації
-- Безпечна реєстрація з хешуванням паролів (bcrypt)
-- JWT токени для авторизації
-- Захищені маршрути для адміністраторів
-- Перевірка прав доступу через мідлвари
+### Authentication System
+- Secure registration with password hashing (bcrypt)
+- JWT tokens for authorization
+- Protected routes for administrators
+- Access control via middleware
 
-### Керування товарами
-- CRUD операції для товарів
-- Завантаження зображень на Cloudinary
-- Фільтрація та пошук товарів
-- Категорії та теги
-- Система рейтингів
+### Product Management
+- CRUD operations for products
+- Image uploads to Cloudinary
+- Product filtering and search
+- Categories and tags
+- Rating system
 
-### Кошик та замовлення
-- Збереження кошика в localStorage
-- Оформлення замовлень
-- Відстеження статусу замовлення
-- Інтеграція з Stripe для оплати
+### Cart & Orders
+- Cart persistence in localStorage
+- Order placement
+- Order status tracking
+- Stripe payment integration
 
-### Система відгуків
-- Залишення відгуків на товари
-- Редагування та видалення своїх відгуків
-- Відображення рейтингу товару
+### Review System
+- Leave reviews on products
+- Edit and delete own reviews
+- Product rating display
 
-### Адмін панель
-- Управління товарами, замовленнями, користувачами
-- Статистика продажів та замовлень
-- Візуалізація даних через графіки
-- Управління акціями
+### Admin Panel
+- Manage products, orders, and users
+- Sales and order statistics
+- Data visualization with charts
+- Deals management
 
-## 🌐 Деплой
+## 🌐 Deployment
 
-Проєкт налаштований для деплою на Vercel. Файли конфігурації знаходяться в:
+The project is configured for deployment on Vercel. Configuration files are located in:
 - `frontend/vercel.json`
 - `backend/vercel.json`
 
-### Деплой на Vercel:
+### Deploy to Vercel:
 
-1. Встановіть Vercel CLI:
+1. Install Vercel CLI:
 ```bash
 npm i -g vercel
 ```
 
-2. Деплой Backend:
+2. Deploy Backend:
 ```bash
 cd backend
 vercel
 ```
 
-3. Деплой Frontend:
+3. Deploy Frontend:
 ```bash
 cd frontend
 vercel
 ```
 
-Не забудьте налаштувати змінні середовища в панелі Vercel для кожного проєкту.
+Remember to configure environment variables in the Vercel dashboard for each project.
 
-## 🔒 Безпека
+## 🔒 Security
 
-- Helmet для захисту HTTP заголовків
-- Rate limiting для захисту від DDoS атак
-- Sanitization для захисту від NoSQL ін'єкцій
-- XSS захист
-- JWT токени для безпечної авторизації
-- Хешування паролів через bcrypt
-- CORS налаштування
+- Helmet for HTTP header protection
+- Rate limiting for DDoS protection
+- Sanitization for NoSQL injection protection
+- XSS protection
+- JWT tokens for secure authorization
+- Password hashing with bcrypt
+- CORS configuration
 
-## 📊 Діаграми
+## 📊 Diagrams
 
-Проєкт містить дві діаграми:
-- `er-diagram.puml` - ER діаграма структури бази даних
-- `use-case.puml` - Use-case діаграма сценаріїв використання
+The project includes two diagrams:
+- `er-diagram.puml` - Database structure ER diagram
+- `use-case.puml` - Use-case diagram for usage scenarios
 
-Для перегляду діаграм використовуйте PlantUML або онлайн редактор.
+Use PlantUML or an online editor to view the diagrams.
 
-## 👤 Автор
+## 👤 Author
 
 LEBABA Shop Development Team
 
-## 📝 Ліцензія
+## 📝 License
 
 ISC
 
 ---
 
-**Приємних покупок! 🛍️**
+**Happy shopping! 🛍️**

@@ -1,4 +1,4 @@
-# 🛍️ LEBABA Shop
+# 🛍️ [Shop]([url](https://shop-lovat-seven.vercel.app)) 
 
 A modern e-commerce web application with full functionality for customers and administrators.
 

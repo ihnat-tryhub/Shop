@@ -328,26 +328,28 @@ Set `VITE_API_BASE_URL` to the deployed backend URL before building.
 
 ## Screenshots
 
-> *Add screenshots once the live demo is available.*
-
 | Page | Preview |
 |---|---|
-| Home | — |
-| Product List | — |
-| Product Detail | — |
-| Cart & Checkout | — |
-| Admin Dashboard | — |
+| Mainpage | <img width="1118" height="965" alt="image" src="https://github.com/user-attachments/assets/945f49b7-ee5d-4353-b092-6a5280ab91d4" /> |
+| Product List | <img width="1142" height="745" alt="image" src="https://github.com/user-attachments/assets/792dc6a6-7c82-403c-8aec-11d020bf6cd2" /> |
+| Product Detail | <img width="1127" height="971" alt="image" src="https://github.com/user-attachments/assets/49d59530-0b27-4a4c-b700-3dffa299c6eb" /> |
+| Cart & Checkout | <img width="623" height="526" alt="image" src="https://github.com/user-attachments/assets/da428bee-a295-4d64-8248-e3713189a412" /> |
+| Admin Dashboard | <img width="1167" height="964" alt="image" src="https://github.com/user-attachments/assets/fd5200e0-9e70-4134-ab70-61c34875e03c" /> |
+| Add Product | <img width="1200" height="602" alt="image" src="https://github.com/user-attachments/assets/6101de13-acd0-4dae-b7ac-54c8c8cc76c6" /> |
+| Manage Product | <img width="1171" height="685" alt="image" src="https://github.com/user-attachments/assets/f393f59f-1b1e-41aa-a7c6-d0b863d2141c" /> |
+| Admin User Dashboard | <img width="1136" height="919" alt="image" src="https://github.com/user-attachments/assets/63307b0f-bcfc-46fd-bc54-4202df3b8ec2" /> |
+| Manage Orders | <img width="1206" height="954" alt="image" src="https://github.com/user-attachments/assets/b97286ff-966c-4dc0-bd39-e3d463de33ad" /> |
+| Shop page | <img width="977" height="928" alt="image" src="https://github.com/user-attachments/assets/85760817-53e9-4850-9e51-b7101d507dd1" /> |
+
+ 
 
 ---
 
 ## Demo Credentials
 
-> *Add credentials if the live demo has a seeded test account.*
-
 | Role | Email | Password |
 |---|---|---|
-| Admin | `admin@example.com` | — |
-| Customer | `user@example.com` | — |
+| Customer | `ihnat.tryhub@nure.ua` | `ihnat.tryhub@nure.ua` |
 
 ---
 
